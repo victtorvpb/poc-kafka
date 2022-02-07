@@ -13,5 +13,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "kafkajs": "^1.15.0"
   }
 }
