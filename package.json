@@ -6,8 +6,14 @@
   "author": "Victor Pereira <victtor.vpb@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
     "commitizen": "^4.2.4",
-    "cz-conventional-changelog": "^3.3.0"
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "prettier": "^2.5.1"
   },
   "config": {
     "commitizen": {
@@ -15,6 +21,8 @@
     }
   },
   "dependencies": {
-    "kafkajs": "^1.15.0"
+    "kafkajs": "^1.15.0",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
   }
 }
