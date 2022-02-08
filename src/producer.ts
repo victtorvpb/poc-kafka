@@ -1,6 +1,6 @@
 import { Kafka } from 'kafkajs';
 
-const sendMessage = async (number: number) => {
+const sendMessage = async (messages: any) => {
   var kafka = new Kafka({
     brokers: ['127.0.0.1:9092'],
   });
@@ -10,11 +10,16 @@ const sendMessage = async (number: number) => {
 
   await producer.send({
     topic: 'topic1',
-    messages: [{ value: 'send message: ' + number, key: number.toString() }],
+    messages: messages,
   });
   await producer.disconnect();
 };
 
+let messages = [];
 for (let index = 30; index < 300; index++) {
-  sendMessage(index);
+  messages.push({
+    value: 'send message: ' + index,
+    key: index.toString(),
+  });
 }
+sendMessage(messages);
