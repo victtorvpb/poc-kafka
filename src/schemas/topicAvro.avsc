@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "teste",
+  "namespace": "topicAvro",
+  "fields": [
+    {
+      "name": "customer_id",
+      "type": "int"
+    },
+    {
+      "name": "description",
+      "type": "string"
+    }
+  ]
+}

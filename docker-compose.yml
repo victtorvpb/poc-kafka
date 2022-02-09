@@ -35,6 +35,18 @@ services:
       - 19000:9000
     environment:
       KAFKA_BROKERCONNECT: kafka:29092
+      
+  schema-registry:
+    image: "confluentinc/cp-schema-registry:5.3.0"
+    hostname: schema-registry
+    networks:
+      - broker-kafka
+    ports:
+      - 8081:8081
+    environment:
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+      SCHEMA_REGISTRY_KAFKASTORE_CONNECTION_URL: zookeeper:2181
+
 
 networks: 
   broker-kafka:
